@@ -1,56 +1,93 @@
-html, body{
-    height: 100%;
-    font-family: 'Wallpoet', cursive;
+:root {
+    --green-050: #d9ffe6;
+    --green-100: #b7eeca;
+    --green-200: #93e2af;
+    --green-300: #73d696;
+    --green-400: #5cce84;
+    --green-500: #3dac64;
+    --green-600: #3bb465;
+    --green-700: #1fa74e;
+    --green-800: #1b8f44;
+    --green-900: #037c2d;
+
+    --grey-050: #f5f7fa;
+    --grey-100: #e4e7eb;
+    --grey-200: #cbd2d9;
+    --grey-300: #9aa5b1;
+    --grey-400: #7b8794;
+    --grey-500: #616e7c;
+    --grey-600: #52606d;
+    --grey-700: #3e4c59;
+    --grey-800: #323f4b;
+    --grey-900: #1f2933;
+  }
+
+html{
+    font-size: 150%;
+    font-weight: 300;
+    font-family: 'Rubik', sans-serif;
+    line-height: 1.4;
 }
 
-.container{
-    background-color: rgb(0, 0, 0);
-    height: 48%;
-    width: 16%;
+body{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin: auto;
-    margin-top: 10%;
-
+    background-image: linear-gradient(235deg, #3c06f0, #8681c7b0);
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.container > button{
-    height: 85px;
-    width: 85px;
-    border-radius: 25%;
-    font-size: 25px;
-    font-family: 'Wallpoet', cursive;
-    margin-left: 3.2%;
+.calculator{
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.678);
+    border-radius: 0.5em;
+    overflow: hidden;
+    height: 27rem;
+    background-image:linear-gradient(235deg,#ffffff93, #8681c75e);
+}
 
+.calculator-buttons{
+    background: var(--grey-200);
+    display: grid;
+    grid-gap: 5px;
+    height: 80%;
+    margin-top: .1rem;
+    padding: 2%;
+    grid-template-columns: repeat(4, auto);
+    font-size: 25%;
+}
+
+button:hover{
+    background-image:linear-gradient(235deg,#ffffff93, #8681c75e);
+    color: rgb(0, 0, 0);
 }
 
 .display{
-    background-color: 0,0,0;
-    color: white;
-    width: 23.66rem;
-    height: 5rem;
+    background-color: var(--grey-900);
+    color: var(--grey-050);
+    width: 16.25rem;
+    height: 3rem;
+    size: 25px;
+    padding: 0.75rem 1rem;
     text-align: right;
-    margin-top: 40px;
-    font-size: 50px;
-    margin-left: 1rem;
-}
-
-.clear{
-    background-color: orange;
-    color: black;
+    font-size: calc(1rem * 1.2 * 1.2);
 }
 
 .zero{
-    flex: .93;
-    color: red;
+    width: 210%;
+}
+
+.clear{
+    background-image:linear-gradient(235deg,#a1010193, #e743025e);
 }
 
 .equal{
-    font-size: 50px;
+    position: relative;
+    left: 105%;
+    width: 95%;
 }
 
-.divide{
-    font-size: 50px;
+.decimal{
+    position: relative;
+    left: 105%;
+    width: 95%;
 }

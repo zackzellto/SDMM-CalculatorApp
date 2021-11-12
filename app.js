@@ -18,3 +18,6 @@ const percentButton = document.getElementsByClassName("percent");
 const plusButton = document.getElementsByClassName("plus");
 const displayScreen = document.getElementsByClassName("display");
 
+function one(){
+    
+}
